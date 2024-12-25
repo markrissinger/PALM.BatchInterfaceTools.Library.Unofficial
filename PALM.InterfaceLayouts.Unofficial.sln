@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PALM.InterfaceLayouts.Unofficial", "PALM.InterfaceLayouts.Unofficial\PALM.InterfaceLayouts.Unofficial.csproj", "{D3BDC333-E8E5-4D92-B253-672A526B43BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.PALM.InterfaceLayouts.Unofficial", "Test.PALM.InterfaceLayouts.Unofficial\Test.PALM.InterfaceLayouts.Unofficial.csproj", "{97C96E05-A7C4-4593-A8E7-DD69237442D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D3BDC333-E8E5-4D92-B253-672A526B43BA} = {D3BDC333-E8E5-4D92-B253-672A526B43BA}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3BDC333-E8E5-4D92-B253-672A526B43BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3BDC333-E8E5-4D92-B253-672A526B43BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3BDC333-E8E5-4D92-B253-672A526B43BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3BDC333-E8E5-4D92-B253-672A526B43BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C96E05-A7C4-4593-A8E7-DD69237442D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C96E05-A7C4-4593-A8E7-DD69237442D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C96E05-A7C4-4593-A8E7-DD69237442D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C96E05-A7C4-4593-A8E7-DD69237442D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46470F6E-FF69-4A18-AB37-039B11F37D39}
+	EndGlobalSection
+EndGlobal
