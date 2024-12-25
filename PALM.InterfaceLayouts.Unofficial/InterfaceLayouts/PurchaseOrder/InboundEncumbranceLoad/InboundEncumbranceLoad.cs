@@ -21,14 +21,12 @@ namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrders.Inbou
         }
         public string InterfaceID { get; private set; }
 
-        //private List<POHeaderDetails> _poHeaderDetails;
         public List<POHeaderDetails> POHeaders { get; set; }
-        //public POHeaderDetails CreatePOHeader()
-        //{
-        //    POHeaderDetails poHeaderDetails = new POHeaderDetails();
-        //    _poHeaderDetails.Add(poHeaderDetails);
-        //    return poHeaderDetails;
-        //}
+
+        private static readonly List<PropertyInfo> _poHeaderProperties = Helper.ExtractInterfaceFieldProperties<POHeaderDetails>();
+        private static readonly List<PropertyInfo> _poLineProperties = Helper.ExtractInterfaceFieldProperties<POLineDetails>();
+        private static readonly List<PropertyInfo> _poShipDetailsProperties = Helper.ExtractInterfaceFieldProperties<POLineShipDetails>();
+        private static readonly List<PropertyInfo> _poDistributionLineProperties = Helper.ExtractInterfaceFieldProperties<PODistributionDetails>();
 
         /// <summary>
         /// Method to convert the Purchase Order records to a 
@@ -39,27 +37,22 @@ namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrders.Inbou
         {
             var sb = new StringBuilder();
 
-            List<PropertyInfo> POHeaderProperties = Helper.ExtractInterfaceFieldProperties<POHeaderDetails>();
-            List<PropertyInfo> POLineProperties = Helper.ExtractInterfaceFieldProperties<POLineDetails>();
-            List<PropertyInfo> POShipDetailsProperties = Helper.ExtractInterfaceFieldProperties<POLineShipDetails>();
-            List<PropertyInfo> PODistributionLineProperties = Helper.ExtractInterfaceFieldProperties<PODistributionDetails>();
-
             foreach (var POHeader in POHeaders)
             {
-                sb.AppendLine(Helper.ComposeRecord(POHeader, POHeaderProperties));
+                sb.AppendLine(Helper.ComposeRecord(POHeader, _poHeaderProperties));
 
                 foreach(var POLine in POHeader.POLines)
                 {
-                    sb.AppendLine(Helper.ComposeRecord(POLine, POLineProperties));
+                    sb.AppendLine(Helper.ComposeRecord(POLine, _poLineProperties));
 
                     if(POLine.POLineShipDetails != null)
                     {
-                        sb.AppendLine(Helper.ComposeRecord(POLine.POLineShipDetails, POShipDetailsProperties));
+                        sb.AppendLine(Helper.ComposeRecord(POLine.POLineShipDetails, _poShipDetailsProperties));
                     }
 
                     foreach(var PODistributionLine in POLine.PODistributionDetails)
                     {
-                        sb.AppendLine(Helper.ComposeRecord(PODistributionLine, PODistributionLineProperties));
+                        sb.AppendLine(Helper.ComposeRecord(PODistributionLine, _poDistributionLineProperties));
                     }
                 }
             }
