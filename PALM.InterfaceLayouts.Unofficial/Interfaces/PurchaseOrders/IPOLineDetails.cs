@@ -8,7 +8,7 @@ using static PALM.InterfaceLayouts.Unofficial.Constants.PurchaseOrdersConstants;
 
 namespace PALM.InterfaceLayouts.Unofficial.Interfaces.PurchaseOrders
 {
-    internal interface IPOLineDetails
+    public interface IPOLineDetails
     {
         public POLineActions POLineAction { get; set; }
 

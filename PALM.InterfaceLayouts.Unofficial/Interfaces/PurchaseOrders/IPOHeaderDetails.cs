@@ -7,7 +7,7 @@ using static PALM.InterfaceLayouts.Unofficial.Constants.PurchaseOrdersConstants;
 
 namespace PALM.InterfaceLayouts.Unofficial.Interfaces.PurchaseOrders
 {
-    internal interface IPOHeaderDetails
+    public interface IPOHeaderDetails
     {
         public POHeaderActions POHeaderAction { get; set; }
 
