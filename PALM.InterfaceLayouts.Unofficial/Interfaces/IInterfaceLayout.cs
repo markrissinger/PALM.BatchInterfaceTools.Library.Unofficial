@@ -3,7 +3,7 @@ using System.Collections;
 using System.Reflection;
 using System.Text;
 
-namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts
+namespace PALM.InterfaceLayouts.Unofficial.Interfaces
 {
     public interface IInterfaceLayout
     {

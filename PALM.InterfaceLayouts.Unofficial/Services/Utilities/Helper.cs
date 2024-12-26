@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PALM.InterfaceLayouts.Unofficial.Utilities
+namespace PALM.InterfaceLayouts.Unofficial.Services.Utilities
 {
     internal static class Helper
     {

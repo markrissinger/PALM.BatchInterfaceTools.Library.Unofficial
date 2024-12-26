@@ -4,10 +4,20 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>Unofficial library to be used for modeling PALM interface data</Description>
+    <PackageTags>PALM</PackageTags>
+    <Title>Unofficial Florida PALM Interface Layouts (Test)</Title>
+    <PackageId>$(AssemblyName).Test</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="InterfaceLayouts\AccountsPayable\InboundVoucherLoad\" />
+    <Folder Include="Entities\InterfaceLayouts\AccountsPayables\InboundVoucherLoad\" />
+    <Folder Include="Services\Transformers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
-using PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrder.InboundEncumbranceLoad;
-using PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad;
+using PALM.InterfaceLayouts.Unofficial.Constants;
+using PALM.InterfaceLayouts.Unofficial.Entities.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad;
 using System.Text;
 
 namespace Test.PALM.InterfaceLayouts.Unofficial
@@ -11,9 +11,6 @@ namespace Test.PALM.InterfaceLayouts.Unofficial
         {
             InboundEncumbranceLoad inboundEncumbranceLoad = CreateMockInboundEncumbranceLoad();
             StringBuilder sb = inboundEncumbranceLoad.ConvertRecordsToStringBuilder();
-
-            var x = sb.ToString();
-            var y = x;
 
             Assert.True(sb.Length > 0);
         }
@@ -30,7 +27,7 @@ namespace Test.PALM.InterfaceLayouts.Unofficial
         private POHeaderDetails CreateMockPOHeaderDetails()
         {
             POHeaderDetails poHeaderDetails = new();
-            poHeaderDetails.POHeaderAction = Constants.POHeaderActions.ADD;
+            poHeaderDetails.POHeaderAction = PurchaseOrdersConstants.POHeaderActions.ADD;
             poHeaderDetails.BusinessUnit = "55000";
             poHeaderDetails.POID = "NEXT";
             poHeaderDetails.PODate = new DateOnly(2024, 12, 25);
@@ -43,7 +40,7 @@ namespace Test.PALM.InterfaceLayouts.Unofficial
         private POLineDetails CreateMockPOLineDetails()
         {
             POLineDetails poLineDetails = new();
-            poLineDetails.POLineAction = Constants.POLineActions.ADD;
+            poLineDetails.POLineAction = PurchaseOrdersConstants.POLineActions.ADD;
             poLineDetails.LineNumber = new Random().Next(1, 999);
 
             poLineDetails.POLineShipDetails = CreateMockPOLineShipDetails();
@@ -63,7 +60,7 @@ namespace Test.PALM.InterfaceLayouts.Unofficial
         private PODistributionDetails CreateMockPODistributionDetails()
         {
             PODistributionDetails poDistributionDetails = new();
-            poDistributionDetails.PODistributionAction = Constants.PODistributionActions.ADD; 
+            poDistributionDetails.PODistributionAction = PurchaseOrdersConstants.PODistributionActions.ADD; 
             poDistributionDetails.DistributionLineNumber = new Random().Next(1, 999);
             poDistributionDetails.Organization = "5512345678";
             poDistributionDetails.Account = "123456";

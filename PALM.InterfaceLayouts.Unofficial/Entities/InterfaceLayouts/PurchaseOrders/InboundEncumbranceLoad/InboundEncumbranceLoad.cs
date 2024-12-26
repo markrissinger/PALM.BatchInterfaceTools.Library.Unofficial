@@ -1,5 +1,6 @@
-﻿using PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrder.InboundEncumbranceLoad;
-using PALM.InterfaceLayouts.Unofficial.Utilities;
+﻿using PALM.InterfaceLayouts.Unofficial.Constants;
+using PALM.InterfaceLayouts.Unofficial.Interfaces;
+using PALM.InterfaceLayouts.Unofficial.Services.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,14 +8,14 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad
+namespace PALM.InterfaceLayouts.Unofficial.Entities.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad
 {
     /// <summary>
     /// Details: https://myfloridacfofloridapalm.us.document360.io/docs/inbound-encumbrance-load-poi002
     /// </summary>
     public class InboundEncumbranceLoad : IInterfaceLayout
     {
-        public InboundEncumbranceLoad() 
+        public InboundEncumbranceLoad()
         {
             POHeaders = new List<POHeaderDetails>();
             InterfaceID = "POI002";
@@ -41,16 +42,16 @@ namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrders.Inbou
             {
                 sb.AppendLine(Helper.ComposeRecord(POHeader, _poHeaderProperties));
 
-                foreach(var POLine in POHeader.POLines)
+                foreach (var POLine in POHeader.POLines)
                 {
                     sb.AppendLine(Helper.ComposeRecord(POLine, _poLineProperties));
 
-                    if(POLine.POLineShipDetails != null)
+                    if (POLine.POLineShipDetails != null)
                     {
                         sb.AppendLine(Helper.ComposeRecord(POLine.POLineShipDetails, _poShipDetailsProperties));
                     }
 
-                    foreach(var PODistributionLine in POLine.PODistributionDetails)
+                    foreach (var PODistributionLine in POLine.PODistributionDetails)
                     {
                         sb.AppendLine(Helper.ComposeRecord(PODistributionLine, _poDistributionLineProperties));
                     }

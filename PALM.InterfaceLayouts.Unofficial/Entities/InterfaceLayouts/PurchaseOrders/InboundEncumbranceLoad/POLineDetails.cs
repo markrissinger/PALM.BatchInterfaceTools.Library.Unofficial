@@ -1,16 +1,17 @@
 ﻿using PALM.InterfaceLayouts.Unofficial.Attributes;
-using PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrder.InboundEncumbranceLoad;
+using PALM.InterfaceLayouts.Unofficial.Interfaces;
+using PALM.InterfaceLayouts.Unofficial.Interfaces.PurchaseOrders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrder.InboundEncumbranceLoad.Constants;
+using static PALM.InterfaceLayouts.Unofficial.Constants.PurchaseOrdersConstants;
 
-namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad
+namespace PALM.InterfaceLayouts.Unofficial.Entities.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad
 {
-    public class POLineDetails : IRecordType
+    public class POLineDetails : IRecordType, IPOLineDetails
     {
         public POLineDetails()
         {
@@ -18,16 +19,11 @@ namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrders.Inbou
             PODistributionDetails = [];
         }
 
+        #region Children
         public POLineShipDetails POLineShipDetails { get; set; }
 
-        //private List<PODistributionDetails> _poDistributionDetails;
         public List<PODistributionDetails> PODistributionDetails { get; set; }
-        //public PODistributionDetails CreatePODistributionLine()
-        //{
-        //    PODistributionDetails poDistributionDetails = new PODistributionDetails();
-        //    _poDistributionDetails.Add(poDistributionDetails);
-        //    return poDistributionDetails;
-        //}
+        #endregion
 
         [InterfaceFieldPosition(1)]
         public static string RecordCode { get { return "L"; } }
@@ -50,7 +46,7 @@ namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrders.Inbou
 
         [InterfaceFieldPosition(6)]
         [AllowedValues(["Y", "N", null])]
-        public string? AmountOnlyFlag {  get; set; }
+        public string? AmountOnlyFlag { get; set; }
 
         [InterfaceFieldPosition(7)]
         [AllowedValues(["G", "S", null])]

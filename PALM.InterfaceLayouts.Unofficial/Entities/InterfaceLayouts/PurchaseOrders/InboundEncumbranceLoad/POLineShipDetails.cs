@@ -1,4 +1,6 @@
 ﻿using PALM.InterfaceLayouts.Unofficial.Attributes;
+using PALM.InterfaceLayouts.Unofficial.Interfaces;
+using PALM.InterfaceLayouts.Unofficial.Interfaces.PurchaseOrders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PALM.InterfaceLayouts.Unofficial.InterfaceLayouts.PurchaseOrder.InboundEncumbranceLoad
+namespace PALM.InterfaceLayouts.Unofficial.Entities.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad
 {
-    public class POLineShipDetails : IRecordType
+    public class POLineShipDetails : IRecordType, IPOLineShipDetails
     {
         public POLineShipDetails()
         {
