@@ -35,6 +35,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
 
         [Required]
         [InterfaceFieldPosition(3)]
+        [Range(0, 99999)]
         public int LineNumber { get; set; }
 
         [InterfaceFieldPosition(4)]

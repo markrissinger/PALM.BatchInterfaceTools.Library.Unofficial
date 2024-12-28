@@ -67,6 +67,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
         public string? SupplierLocation { get; set; }
 
         [InterfaceFieldPosition(12)]
+        [Range(0, 99999)]
         public int? AddressSequenceNumber { get; set; }
 
         [Required]

@@ -27,6 +27,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
 
         [Required]
         [InterfaceFieldPosition(3)]
+        [Range(0, 99999)]
         public int DistributionLineNumber { get; set; }
 
         public decimal? DistributionPOQuantity { get; set; }
@@ -41,55 +42,64 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
         [InterfaceFieldPosition(6)]
         internal string? DistributionLineMerchandiseAmountFormatted { get { return DistributionLineMerchandiseAmount?.ToString("#.##"); } }
 
-        [Required]
         [InterfaceFieldPosition(7)]
+        [StringLength(maximumLength: 10, MinimumLength = 10)]
         public string? Organization { get; set; }
 
-        [Required]
         [InterfaceFieldPosition(8)]
+        [StringLength(maximumLength: 6, MinimumLength = 6)]
         public string? Account { get; set; }
 
-        [Required]
         [InterfaceFieldPosition(9)]
+        [StringLength(maximumLength: 5, MinimumLength = 5)]
         public string? Fund { get; set; }
 
-        [Required]
         [InterfaceFieldPosition(10)]
+        [StringLength(maximumLength: 8, MinimumLength = 8)]
         public string? BudgetEntity { get; set; }
 
-        [Required]
         [InterfaceFieldPosition(11)]
+        [StringLength(maximumLength: 6, MinimumLength = 6)]
         public string? Category { get; set; }
 
-        [Required]
         [InterfaceFieldPosition(12)]
+        [StringLength(maximumLength: 10, MinimumLength = 10)]
         public string? StateProgram { get; set; }
 
         [InterfaceFieldPosition(13)]
+        [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? Grant { get; set; }
 
         [InterfaceFieldPosition(14)]
+        [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? OA1 { get; set; }
 
         [InterfaceFieldPosition(15)]
+        [StringLength(maximumLength: 1, MinimumLength = 10)]
         public string? OA2 { get; set; }
 
         [InterfaceFieldPosition(16)]
+        [StringLength(maximumLength: 5, MinimumLength = 5)]
         public string? PCBusinessUnit { get; set; }
 
         [InterfaceFieldPosition(17)]
+        [StringLength(maximumLength: 1, MinimumLength = 15)]
         public string? Project { get; set; }
 
         [InterfaceFieldPosition(18)]
+        [StringLength(maximumLength: 1, MinimumLength = 15)]
         public string? Activity { get; set; }
 
         [InterfaceFieldPosition(19)]
+        [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? PCSourceType { get; set; }
 
         [InterfaceFieldPosition(20)]
+        [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? PCCategory { get; set; }
 
         [InterfaceFieldPosition(21)]
+        [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? PCSubcategory { get; set; }
 
         public DateOnly? BudgetDate { get; set; }
@@ -97,6 +107,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
         internal string? BudgetDateFormatted => BudgetDate?.ToString("MM/dd/yyyy");
 
         [InterfaceFieldPosition(23)]
+        [StringLength(maximumLength: 1, MinimumLength = 10)]
         public string? AssetProfileID { get; set; }
 
         [InterfaceFieldPosition(24)]
