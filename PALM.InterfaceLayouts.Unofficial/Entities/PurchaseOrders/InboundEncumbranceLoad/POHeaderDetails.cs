@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static PALM.InterfaceLayouts.Unofficial.Constants.PurchaseOrdersConstants;
 
-namespace PALM.InterfaceLayouts.Unofficial.Entities.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad
+namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumbranceLoad
 {
     public class POHeaderDetails : IRecordType, IPOHeaderDetails
     {

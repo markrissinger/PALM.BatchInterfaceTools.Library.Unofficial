@@ -1,5 +1,6 @@
 using PALM.InterfaceLayouts.Unofficial.Constants;
-using PALM.InterfaceLayouts.Unofficial.Entities.InterfaceLayouts.PurchaseOrders.InboundEncumbranceLoad;
+using PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumbranceLoad;
+using PALM.InterfaceLayouts.Unofficial.Extensions;
 using System.Text;
 
 namespace Test.PALM.InterfaceLayouts.Unofficial
@@ -9,17 +10,17 @@ namespace Test.PALM.InterfaceLayouts.Unofficial
         [Fact]
         public void TestInboundEncumbranceLoad()
         {
-            InboundEncumbranceLoad inboundEncumbranceLoad = CreateMockInboundEncumbranceLoad();
-            StringBuilder sb = inboundEncumbranceLoad.ConvertRecordsToStringBuilder();
+            IEnumerable<POHeaderDetails> purchaseOrders = CreateMockInboundEncumbranceLoad();
+            StringBuilder sb = purchaseOrders.WriteRecordsToStringBuilder();
 
             Assert.True(sb.Length > 0);
         }
 
-        private InboundEncumbranceLoad CreateMockInboundEncumbranceLoad()
+        private IEnumerable<POHeaderDetails> CreateMockInboundEncumbranceLoad()
         {
-            InboundEncumbranceLoad inboundEncumbranceLoad = new();
-            inboundEncumbranceLoad.POHeaders.Add(CreateMockPOHeaderDetails());
-            inboundEncumbranceLoad.POHeaders.Add(CreateMockPOHeaderDetails());
+            List<POHeaderDetails> inboundEncumbranceLoad = new();
+            inboundEncumbranceLoad.Add(CreateMockPOHeaderDetails());
+            inboundEncumbranceLoad.Add(CreateMockPOHeaderDetails());
 
             return inboundEncumbranceLoad;
         }

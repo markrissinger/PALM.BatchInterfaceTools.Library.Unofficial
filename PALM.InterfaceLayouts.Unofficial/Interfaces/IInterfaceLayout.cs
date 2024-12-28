@@ -9,7 +9,8 @@ namespace PALM.InterfaceLayouts.Unofficial.Interfaces
     {
         public string InterfaceID { get; }
 
-        public byte[] ConvertRecordsToByteArray();
-        public StringBuilder ConvertRecordsToStringBuilder();
+        public byte[] WriteRecordsToByteArray();
+        public StringBuilder WriteRecordsToStringBuilder();
+        public void WriteRecordsToFile();
     }
 }

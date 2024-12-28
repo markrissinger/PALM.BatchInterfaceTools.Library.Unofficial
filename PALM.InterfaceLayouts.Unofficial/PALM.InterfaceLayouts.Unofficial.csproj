@@ -14,7 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\InterfaceLayouts\AccountsPayables\InboundVoucherLoad\" />
+    <Folder Include="Entities\AccountsPayables\InboundVoucherLoad\" />
+    <Folder Include="Services\Utilities\" />
   </ItemGroup>
 
 </Project>

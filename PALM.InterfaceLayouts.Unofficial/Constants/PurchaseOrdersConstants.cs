@@ -8,6 +8,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Constants
 {
     public static class PurchaseOrdersConstants
     {
+        public const string InterfaceID = "POI002";
         public enum POHeaderActions { ADD, UPDATE, CANCEL, CLOSE, REOPEN, DELETE };
         public enum POLineActions { ADD, UPDATE };
         public enum PODistributionActions { ADD, UPDATE };
