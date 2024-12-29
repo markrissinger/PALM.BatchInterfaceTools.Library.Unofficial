@@ -25,7 +25,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
 
         public decimal? POQuantity { get; set; }
         [InterfaceFieldPosition(3)]
-        internal string? POQuantityFormatted { get { return POTotalLineAmount?.ToString("#.###"); } }
+        internal string? POQuantityFormatted { get { return POQuantity?.ToString("#.###"); } }
 
         [InterfaceFieldPosition(4)]
         [StringLength(maximumLength: 30)]
