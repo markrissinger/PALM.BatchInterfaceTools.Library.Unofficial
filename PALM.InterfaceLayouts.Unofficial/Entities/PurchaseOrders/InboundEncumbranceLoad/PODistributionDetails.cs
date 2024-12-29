@@ -40,7 +40,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
 
         public decimal? DistributionLineMerchandiseAmount { get; set; }
         [InterfaceFieldPosition(6)]
-        internal string? DistributionLineMerchandiseAmountFormatted { get { return DistributionLineMerchandiseAmount?.ToString("#.##"); } }
+        internal string? DistributionLineMerchandiseAmountFormatted { get { return DistributionLineMerchandiseAmount?.ToString("0.00"); } }
 
         [InterfaceFieldPosition(7)]
         [StringLength(maximumLength: 10, MinimumLength = 10)]
