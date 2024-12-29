@@ -34,6 +34,8 @@ namespace PALM.InterfaceLayouts.Unofficial.Interfaces.PurchaseOrders
 
         public string? Grant { get; set; }
 
+        public string? Contract { get; set; }
+
         public string? OA1 { get; set; }
 
         public string? OA2 { get; set; }

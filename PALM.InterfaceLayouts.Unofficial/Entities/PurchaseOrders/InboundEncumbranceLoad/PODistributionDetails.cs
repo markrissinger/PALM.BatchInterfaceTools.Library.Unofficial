@@ -71,82 +71,86 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
         public string? Grant { get; set; }
 
         [InterfaceFieldPosition(14)]
+        [StringLength(maximumLength: 1, MinimumLength = 10)]
+        public string? Contract { get; set; }
+
+        [InterfaceFieldPosition(15)]
         [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? OA1 { get; set; }
 
-        [InterfaceFieldPosition(15)]
+        [InterfaceFieldPosition(16)]
         [StringLength(maximumLength: 1, MinimumLength = 10)]
         public string? OA2 { get; set; }
 
-        [InterfaceFieldPosition(16)]
+        [InterfaceFieldPosition(17)]
         [StringLength(maximumLength: 5, MinimumLength = 5)]
         public string? PCBusinessUnit { get; set; }
 
-        [InterfaceFieldPosition(17)]
+        [InterfaceFieldPosition(18)]
         [StringLength(maximumLength: 1, MinimumLength = 15)]
         public string? Project { get; set; }
 
-        [InterfaceFieldPosition(18)]
+        [InterfaceFieldPosition(19)]
         [StringLength(maximumLength: 1, MinimumLength = 15)]
         public string? Activity { get; set; }
 
-        [InterfaceFieldPosition(19)]
+        [InterfaceFieldPosition(20)]
         [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? PCSourceType { get; set; }
 
-        [InterfaceFieldPosition(20)]
+        [InterfaceFieldPosition(21)]
         [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? PCCategory { get; set; }
 
-        [InterfaceFieldPosition(21)]
+        [InterfaceFieldPosition(22)]
         [StringLength(maximumLength: 1, MinimumLength = 5)]
         public string? PCSubcategory { get; set; }
 
         public DateOnly? BudgetDate { get; set; }
-        [InterfaceFieldPosition(22)]
+        [InterfaceFieldPosition(23)]
         internal string? BudgetDateFormatted => BudgetDate?.ToString("MM/dd/yyyy");
 
-        [InterfaceFieldPosition(23)]
+        [InterfaceFieldPosition(24)]
         [StringLength(maximumLength: 1, MinimumLength = 10)]
         public string? AssetProfileID { get; set; }
 
-        [InterfaceFieldPosition(24)]
+        [InterfaceFieldPosition(25)]
         [StringLength(maximumLength: 30)]
         public string? Filler1 { get; set; }
 
-        [InterfaceFieldPosition(25)]
+        [InterfaceFieldPosition(26)]
         [StringLength(maximumLength: 30)]
         public string? Filler2 { get; set; }
 
-        [InterfaceFieldPosition(26)]
+        [InterfaceFieldPosition(27)]
         [StringLength(maximumLength: 30)]
         public string? Filler3 { get; set; }
 
-        [InterfaceFieldPosition(27)]
+        [InterfaceFieldPosition(28)]
         [StringLength(maximumLength: 30)]
         public string? Filler4 { get; set; }
 
-        [InterfaceFieldPosition(28)]
+        [InterfaceFieldPosition(29)]
         [StringLength(maximumLength: 30)]
         public string? Filler5 { get; set; }
 
-        [InterfaceFieldPosition(29)]
+        [InterfaceFieldPosition(30)]
         [StringLength(maximumLength: 30)]
         public string? Filler6 { get; set; }
 
-        [InterfaceFieldPosition(30)]
+        [InterfaceFieldPosition(31)]
         [StringLength(maximumLength: 30)]
         public string? Filler7 { get; set; }
 
-        [InterfaceFieldPosition(31)]
+        [InterfaceFieldPosition(32)]
         [StringLength(maximumLength: 30)]
         public string? Filler8 { get; set; }
 
-        [InterfaceFieldPosition(32)]
+        [InterfaceFieldPosition(33)]
         [StringLength(maximumLength: 30)]
         public string? Filler9 { get; set; }
 
-        [InterfaceFieldPosition(33)]
+        [InterfaceFieldPosition(34)]
         [StringLength(maximumLength: 30)]
         public string? Filler10 { get; set; }
     }

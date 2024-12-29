@@ -36,7 +36,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
         public string? BusinessUnit { get; set; }
 
         [InterfaceFieldPosition(4)]
-        [StringLength(maximumLength: 10, MinimumLength = 4)]
+        [StringLength(maximumLength: 10, MinimumLength = 10)]
         public string? POID { get; set; }
 
         [InterfaceFieldPosition(5)]

@@ -39,10 +39,11 @@ namespace PALM.InterfaceLayouts.Unofficial.Entities.PurchaseOrders.InboundEncumb
         public int LineNumber { get; set; }
 
         [InterfaceFieldPosition(4)]
-        [StringLength(maximumLength: 18, MinimumLength = 18)]
+        [StringLength(maximumLength: 18, MinimumLength = 1)]
         public string? CategoryCode { get; set; }
 
         [InterfaceFieldPosition(5)]
+        [StringLength(maximumLength: 3, MinimumLength = 1)]
         public string? UnitOfMeasure { get; set; }
 
         [InterfaceFieldPosition(6)]

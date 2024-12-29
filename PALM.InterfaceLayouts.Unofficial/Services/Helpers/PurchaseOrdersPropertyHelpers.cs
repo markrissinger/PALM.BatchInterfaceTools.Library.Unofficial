@@ -11,7 +11,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Services.Helpers
     /// <summary>
     /// Cotnains list of properties that should be used PALM interfaces for each of the Purchase Order classes.
     /// </summary>
-    internal static class PurchaseOrdersPropertyHelpers
+    public static class PurchaseOrdersPropertyHelpers
     {
         /// Locker to enforce double check locking singleton.
         private static object locker = new object();
@@ -19,7 +19,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Services.Helpers
         #region InboundEncumbranceLoad
         // PO Header Properties
         private static IEnumerable<PropertyInfo>? _poHeaderProperties;
-        internal static IEnumerable<PropertyInfo> POHeaderProperties
+        public static IEnumerable<PropertyInfo> POHeaderProperties
         {
             get
             {
@@ -37,7 +37,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Services.Helpers
 
         // PO Line Properties
         private static IEnumerable<PropertyInfo>? _poLineProperties;
-        internal static IEnumerable<PropertyInfo> POLineProperties
+        public static IEnumerable<PropertyInfo> POLineProperties
         {
             get
             {
@@ -55,7 +55,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Services.Helpers
 
         // PO Ship Properties
         private static IEnumerable<PropertyInfo>? _poShipDetailsProperties;
-        internal static IEnumerable<PropertyInfo> POShipDetailsProperties
+        public static IEnumerable<PropertyInfo> POShipDetailsProperties
         {
             get
             {
@@ -73,7 +73,7 @@ namespace PALM.InterfaceLayouts.Unofficial.Services.Helpers
 
         // PO Distribution Properties
         private static IEnumerable<PropertyInfo>? _poDistributionLineProperties;
-        internal static IEnumerable<PropertyInfo> PODistributionLineProperties
+        public static IEnumerable<PropertyInfo> PODistributionLineProperties
         {
             get
             {
