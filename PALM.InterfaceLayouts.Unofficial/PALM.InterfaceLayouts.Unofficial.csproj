@@ -9,7 +9,7 @@
     <PackageTags>PALM</PackageTags>
     <Title>Unofficial Florida PALM Interface Layouts (Test)</Title>
     <PackageId>$(AssemblyName).Test</PackageId>
-    <Version>$(VersionPrefix)1.0.4</Version>
+    <Version>$(VersionPrefix)1.0.5</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
