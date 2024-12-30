@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PALM.InterfaceLayouts.Unofficial", "PALM.InterfaceLayouts.Unofficial\PALM.InterfaceLayouts.Unofficial.csproj", "{D3BDC333-E8E5-4D92-B253-672A526B43BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.PALM.InterfaceLayouts.Unofficial", "Test.PALM.InterfaceLayouts.Unofficial\Test.PALM.InterfaceLayouts.Unofficial.csproj", "{97C96E05-A7C4-4593-A8E7-DD69237442D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PALM.InterfaceLayouts.Unofficial.Tests", "Test.PALM.InterfaceLayouts.Unofficial\PALM.InterfaceLayouts.Unofficial.Tests.csproj", "{97C96E05-A7C4-4593-A8E7-DD69237442D0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D3BDC333-E8E5-4D92-B253-672A526B43BA} = {D3BDC333-E8E5-4D92-B253-672A526B43BA}
 	EndProjectSection
