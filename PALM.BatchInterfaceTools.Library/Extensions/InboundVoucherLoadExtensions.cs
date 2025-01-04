@@ -57,9 +57,9 @@ namespace PALM.BatchInterfaceTools.Library.Extensions
         /// <typeparam name="T">Type limited to IEnumerable of VoucherHeader</typeparam>
         /// <param name="POHeaders">List of VoucherHeader to convert to byte array.</param>
         /// <returns>Byte array based on the VoucherHeader records.</returns>
-        public static byte[] WriteRecordsToByteArray<T>(this IEnumerable<T> VoucherHeaders) where T : VoucherHeader
+        public static byte[] WriteRecordsToByteArray<T>(this IEnumerable<T> VoucherHeaders, bool includeSupplierRecords = true) where T : VoucherHeader
         {
-            return Encoding.ASCII.GetBytes(VoucherHeaders.WriteRecordsToStringBuilder().ToString());
+            return Encoding.ASCII.GetBytes(VoucherHeaders.WriteRecordsToStringBuilder(includeSupplierRecords).ToString());
         }
 
         /// <summary>
@@ -68,9 +68,9 @@ namespace PALM.BatchInterfaceTools.Library.Extensions
         /// <typeparam name="T">Type limited to IEnumerable of VoucherHeader</typeparam>
         /// <param name="POHeaders">List of VoucherHeader to enter into file.</param>
         /// <param name="filePath">File path including file name and extension.</param>
-        public static void WriteRecordsToFile<T>(this IEnumerable<T> VoucherHeaders, string filePath) where T : VoucherHeader
+        public static void WriteRecordsToFile<T>(this IEnumerable<T> VoucherHeaders, string filePath, bool includeSupplierRecords = true) where T : VoucherHeader
         {
-            byte[] fileContents = Encoding.ASCII.GetBytes(VoucherHeaders.WriteRecordsToStringBuilder().ToString());
+            byte[] fileContents = Encoding.ASCII.GetBytes(VoucherHeaders.WriteRecordsToStringBuilder(includeSupplierRecords).ToString());
             using (var fs = File.Create(filePath))
             {
                 fs.Write(fileContents, 0, fileContents.Length);
