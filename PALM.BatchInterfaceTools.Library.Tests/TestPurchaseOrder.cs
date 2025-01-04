@@ -29,7 +29,7 @@ namespace Test.PALM.BatchInterfaceTools.Library
         private POHeaderDetails CreateMockPOHeaderDetails()
         {
             POHeaderDetails poHeaderDetails = new();
-            poHeaderDetails.POHeaderAction = PurchaseOrdersConstants.POHeaderActions.ADD;
+            poHeaderDetails.POHeaderAction = PurchaseOrdersConstants.POHeaderActionValues.ADD;
             poHeaderDetails.BusinessUnit = "55000";
             poHeaderDetails.POID = "NEXT";
             poHeaderDetails.PODate = new DateOnly(2024, 12, 25);
@@ -42,7 +42,7 @@ namespace Test.PALM.BatchInterfaceTools.Library
         private POLineDetails CreateMockPOLineDetails()
         {
             POLineDetails poLineDetails = new();
-            poLineDetails.POLineAction = PurchaseOrdersConstants.POLineActions.ADD;
+            poLineDetails.POLineAction = PurchaseOrdersConstants.POLineActionValues.ADD;
             poLineDetails.LineNumber = new Random().Next(1, 999);
 
             poLineDetails.POLineShipDetails = CreateMockPOLineShipDetails();
@@ -62,7 +62,7 @@ namespace Test.PALM.BatchInterfaceTools.Library
         private PODistributionDetails CreateMockPODistributionDetails()
         {
             PODistributionDetails poDistributionDetails = new();
-            poDistributionDetails.PODistributionAction = PurchaseOrdersConstants.PODistributionActions.ADD; 
+            poDistributionDetails.PODistributionAction = PurchaseOrdersConstants.PODistributionActionValues.ADD; 
             poDistributionDetails.DistributionLineNumber = new Random().Next(1, 999);
             poDistributionDetails.Organization = "5512345678";
             poDistributionDetails.Account = "123456";

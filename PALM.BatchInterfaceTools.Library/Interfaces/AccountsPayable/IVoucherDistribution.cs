@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static PALM.BatchInterfaceTools.Library.Constants.PurchaseOrdersConstants;
+using static PALM.BatchInterfaceTools.Library.Constants.AccountsPayableConstants;
 
-namespace PALM.BatchInterfaceTools.Library.Interfaces.PurchaseOrders
+namespace PALM.BatchInterfaceTools.Library.Interfaces.AccountsPayable
 {
-    public interface IPODistributionDetails
+    public interface IVoucherDistribution
     {
-        public PODistributionActionValues PODistributionAction { get; set; }
+        public int VoucherLineNumber { get; set; }
 
-        public int DistributionLineNumber { get; set; }
-
-        public decimal? DistributionPOQuantity { get; set; }
-
-        public decimal? DistributionPercentage { get; set; }
+        public int VoucherDistributionLineNumber { get; set; }
 
         public decimal? DistributionLineMerchandiseAmount { get; set; }
+
+        public decimal? DistributionLineQuantity { get; set; }
+
+        public string? GLBusinessUnit { get; set; }
 
         public string? Organization { get; set; }
 
@@ -50,11 +49,27 @@ namespace PALM.BatchInterfaceTools.Library.Interfaces.PurchaseOrders
 
         public string? PCCategory { get; set; }
 
-        public string? PCSubcategory { get; set; }
+        public string? Subcategory { get; set; }
 
         public DateOnly? BudgetDate { get; set; }
 
-        public string? AssetProfileID { get; set; }
+        public int? POLineNumber { get; set; }
+
+        public int? PODistributionLineNumber { get; set; }
+
+        public int? ReceiptLineNumber { get; set; }
+
+        public int? ReceiptDistributionLineNumber { get; set; }
+
+        public string? AssetIDReference { get; set; }
+
+        public AssetFlagValues? AssetFlag { get; set; }
+
+        public string? AMBusinessUnit { get; set; }
+
+        public string? AssetID { get; set; }
+
+        public string? ProfileID { get; set; }
 
         // Intentionally skipping the filler fields to avoid unwanted side-effects in PALM
         //public string? Filler1 { get; set; }
@@ -62,10 +77,5 @@ namespace PALM.BatchInterfaceTools.Library.Interfaces.PurchaseOrders
         //public string? Filler3 { get; set; }
         //public string? Filler4 { get; set; }
         //public string? Filler5 { get; set; }
-        //public string? Filler6 { get; set; }
-        //public string? Filler7 { get; set; }
-        //public string? Filler8 { get; set; }
-        //public string? Filler9 { get; set; }
-        //public string? Filler10 { get; set; }
     }
 }

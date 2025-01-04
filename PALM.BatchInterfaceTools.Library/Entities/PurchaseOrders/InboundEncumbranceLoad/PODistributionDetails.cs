@@ -21,9 +21,9 @@ namespace PALM.BatchInterfaceTools.Library.Entities.PurchaseOrders.InboundEncumb
         public static string RecordCode { get { return "D"; } }
 
         [Required]
-        public PODistributionActions PODistributionAction { get; set; }
+        public PODistributionActionValues PODistributionAction { get; set; }
         [InterfaceFieldPosition(2)]
-        internal string? PODistributionActionFormatted { get { return Enum.GetName(typeof(PODistributionActions), PODistributionAction); } }
+        internal string? PODistributionActionFormatted { get { return Enum.GetName(typeof(PODistributionActionValues), PODistributionAction); } }
 
         [Required]
         [InterfaceFieldPosition(3)]
@@ -67,19 +67,19 @@ namespace PALM.BatchInterfaceTools.Library.Entities.PurchaseOrders.InboundEncumb
         public string? StateProgram { get; set; }
 
         [InterfaceFieldPosition(13)]
-        [StringLength(maximumLength: 1, MinimumLength = 5)]
+        [StringLength(maximumLength: 5, MinimumLength = 1)]
         public string? Grant { get; set; }
 
         [InterfaceFieldPosition(14)]
-        [StringLength(maximumLength: 1, MinimumLength = 10)]
+        [StringLength(maximumLength: 10, MinimumLength = 1)]
         public string? Contract { get; set; }
 
         [InterfaceFieldPosition(15)]
-        [StringLength(maximumLength: 1, MinimumLength = 5)]
+        [StringLength(maximumLength: 5, MinimumLength = 1)]
         public string? OA1 { get; set; }
 
         [InterfaceFieldPosition(16)]
-        [StringLength(maximumLength: 1, MinimumLength = 10)]
+        [StringLength(maximumLength: 10, MinimumLength = 1)]
         public string? OA2 { get; set; }
 
         [InterfaceFieldPosition(17)]
@@ -87,23 +87,23 @@ namespace PALM.BatchInterfaceTools.Library.Entities.PurchaseOrders.InboundEncumb
         public string? PCBusinessUnit { get; set; }
 
         [InterfaceFieldPosition(18)]
-        [StringLength(maximumLength: 1, MinimumLength = 15)]
+        [StringLength(maximumLength: 15, MinimumLength = 1)]
         public string? Project { get; set; }
 
         [InterfaceFieldPosition(19)]
-        [StringLength(maximumLength: 1, MinimumLength = 15)]
+        [StringLength(maximumLength: 15, MinimumLength = 1)]
         public string? Activity { get; set; }
 
         [InterfaceFieldPosition(20)]
-        [StringLength(maximumLength: 1, MinimumLength = 5)]
+        [StringLength(maximumLength: 5, MinimumLength = 1)]
         public string? PCSourceType { get; set; }
 
         [InterfaceFieldPosition(21)]
-        [StringLength(maximumLength: 1, MinimumLength = 5)]
+        [StringLength(maximumLength: 5, MinimumLength = 1)]
         public string? PCCategory { get; set; }
 
         [InterfaceFieldPosition(22)]
-        [StringLength(maximumLength: 1, MinimumLength = 5)]
+        [StringLength(maximumLength: 5, MinimumLength = 1)]
         public string? PCSubcategory { get; set; }
 
         public DateOnly? BudgetDate { get; set; }

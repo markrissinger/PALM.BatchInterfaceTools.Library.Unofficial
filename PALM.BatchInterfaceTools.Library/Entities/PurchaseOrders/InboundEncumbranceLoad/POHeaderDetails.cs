@@ -26,9 +26,9 @@ namespace PALM.BatchInterfaceTools.Library.Entities.PurchaseOrders.InboundEncumb
         public static string RecordCode { get { return "H"; } }
 
         [Required]
-        public POHeaderActions POHeaderAction { get; set; }
+        public POHeaderActionValues POHeaderAction { get; set; }
         [InterfaceFieldPosition(2)]
-        internal string? POHeaderActionFormatted { get { return Enum.GetName(typeof(POHeaderActions), POHeaderAction); } }
+        internal string? POHeaderActionFormatted { get { return Enum.GetName(typeof(POHeaderActionValues), POHeaderAction); } }
 
         [Required]
         [InterfaceFieldPosition(3)]

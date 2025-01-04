@@ -7,14 +7,13 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Description>Unofficial library to be used for modeling PALM interface data</Description>
     <PackageTags>PALM</PackageTags>
-    <Title>Unofficial Florida PALM Interface Layouts (Test)</Title>
-    <PackageId>$(AssemblyName).Test</PackageId>
+    <Title>PALM Batch Interface Tools Library (Unofficial)</Title>
+    <PackageId>$(AssemblyName).Unofficial</PackageId>
     <Version>$(VersionPrefix)1.0.5</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\AccountsPayables\InboundVoucherLoad\" />
     <Folder Include="Services\Utilities\" />
   </ItemGroup>
 

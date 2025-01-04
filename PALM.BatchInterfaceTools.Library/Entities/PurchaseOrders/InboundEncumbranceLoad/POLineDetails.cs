@@ -29,9 +29,9 @@ namespace PALM.BatchInterfaceTools.Library.Entities.PurchaseOrders.InboundEncumb
         public static string RecordCode { get { return "L"; } }
 
         [Required]
-        public POLineActions POLineAction { get; set; }
+        public POLineActionValues POLineAction { get; set; }
         [InterfaceFieldPosition(2)]
-        internal string? POLineActionsFormatted { get { return Enum.GetName(typeof(POLineActions), POLineAction); } }
+        internal string? POLineActionsFormatted { get { return Enum.GetName(typeof(POLineActionValues), POLineAction); } }
 
         [Required]
         [InterfaceFieldPosition(3)]

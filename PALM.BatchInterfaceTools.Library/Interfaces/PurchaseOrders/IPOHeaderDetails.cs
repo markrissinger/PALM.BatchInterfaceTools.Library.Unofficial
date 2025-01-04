@@ -9,7 +9,7 @@ namespace PALM.BatchInterfaceTools.Library.Interfaces.PurchaseOrders
 {
     public interface IPOHeaderDetails
     {
-        public POHeaderActions POHeaderAction { get; set; }
+        public POHeaderActionValues POHeaderAction { get; set; }
 
         public string? BusinessUnit { get; set; }
 

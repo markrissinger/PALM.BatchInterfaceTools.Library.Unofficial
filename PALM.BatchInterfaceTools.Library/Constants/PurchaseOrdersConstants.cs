@@ -9,8 +9,8 @@ namespace PALM.BatchInterfaceTools.Library.Constants
     public static class PurchaseOrdersConstants
     {
         public const string InterfaceID = "POI002";
-        public enum POHeaderActions { ADD, UPDATE, CANCEL, CLOSE, REOPEN, DELETE };
-        public enum POLineActions { ADD, UPDATE };
-        public enum PODistributionActions { ADD, UPDATE };
+        public enum POHeaderActionValues { ADD, UPDATE, CANCEL, CLOSE, REOPEN, DELETE };
+        public enum POLineActionValues { ADD, UPDATE };
+        public enum PODistributionActionValues { ADD, UPDATE };
     }
 }

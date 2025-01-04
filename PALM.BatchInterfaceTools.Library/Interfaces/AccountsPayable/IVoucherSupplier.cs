@@ -1,28 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static PALM.BatchInterfaceTools.Library.Constants.PurchaseOrdersConstants;
 
-namespace PALM.BatchInterfaceTools.Library.Interfaces.PurchaseOrders
+namespace PALM.BatchInterfaceTools.Library.Interfaces.AccountsPayable
 {
-    public interface IPOLineDetails
+    public interface IVoucherSupplier
     {
-        public POLineActionValues POLineAction { get; set; }
+        public string? Name1 { get; set; }
 
-        public int LineNumber { get; set; }
+        public string? Country { get; set; }
 
-        public string? CategoryCode { get; set; }
+        public string? Address1 { get; set; }
 
-        public string? UnitOfMeasure { get; set; }
+        public string? Address2 { get; set; }
 
-        public string? AmountOnlyFlag { get; set; }
+        public string? Address3 { get; set; }
 
-        public string? PhysicalNature { get; set; }
+        public string? Address4 { get; set; }
 
-        public string? ItemDescription { get; set; }
+        public string? City { get; set; }
+
+        public string? State { get; set; }
+
+        public string? PostalCode { get; set; }
 
         // Intentionally skipping the filler fields to avoid unwanted side-effects in PALM
         //public string? Filler1 { get; set; }
