@@ -9,7 +9,7 @@
     <PackageTags>PALM</PackageTags>
     <Title>PALM Batch Interface Tools Library (Unofficial)</Title>
     <PackageId>$(AssemblyName).Unofficial</PackageId>
-    <Version>$(VersionPrefix)1.0.0</Version>
+    <Version>$(VersionPrefix)1.0.1</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
