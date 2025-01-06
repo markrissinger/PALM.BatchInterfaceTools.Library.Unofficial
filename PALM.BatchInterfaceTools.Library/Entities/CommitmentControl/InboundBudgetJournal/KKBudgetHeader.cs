@@ -29,7 +29,7 @@ namespace PALM.BatchInterfaceTools.Library.Entities.CommitmentControl.InboundBud
         [Required]
         [InterfaceFieldPosition(2)]
         [StringLength(maximumLength: 5, MinimumLength = 5)]
-        public string BusinessUnit { get; set; }
+        public string? BusinessUnit { get; set; }
 
         [Required]
         public DateOnly JournalDate { get; set; }
@@ -49,7 +49,7 @@ namespace PALM.BatchInterfaceTools.Library.Entities.CommitmentControl.InboundBud
         [Required]
         [StringLength(maximumLength: 1)]
         [InterfaceFieldPosition(6)]
-        public string BudgetEntryType { get; set; }
+        public string? BudgetEntryType { get; set; }
 
         [StringLength(maximumLength: 150)]
         [InterfaceFieldPosition(7)]

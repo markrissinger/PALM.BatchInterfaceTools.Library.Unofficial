@@ -9,11 +9,11 @@ namespace PALM.BatchInterfaceTools.Library.Interfaces.CommitmentControl
 {
     public interface IKKBudgetHeader
     {
-        public string BusinessUnit { get; set; }
+        public string? BusinessUnit { get; set; }
         public DateOnly JournalDate { get; set; }
         public string? LongDescription { get; set; }
         public LedgerGroupValues LedgerGroup { get; set; }
-        public string BudgetEntryType { get; set; }
+        public string? BudgetEntryType { get; set; }
         public string? AlternateDescription { get; set; }
     }
 }

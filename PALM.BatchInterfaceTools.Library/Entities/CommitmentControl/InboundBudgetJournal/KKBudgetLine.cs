@@ -16,7 +16,7 @@ namespace PALM.BatchInterfaceTools.Library.Entities.CommitmentControl.InboundBud
         public KKBudgetLine() { }
 
         [InterfaceFieldPosition(1)]
-        public static string RecordCode { get { return "H"; } }
+        public static string RecordCode { get { return "L"; } }
 
         [Required]
         [Range(0, 99999)]
@@ -33,7 +33,7 @@ namespace PALM.BatchInterfaceTools.Library.Entities.CommitmentControl.InboundBud
         public string? Organization { get; set; }
 
         [Required]
-        [StringLength(maximumLength: 6, MinimumLength = 6)]
+        [StringLength(maximumLength: 6, MinimumLength = 1)] // intentionally set to 1 due to budgetary account values
         [InterfaceFieldPosition(5)]
         public string? Account { get; set; }
 
